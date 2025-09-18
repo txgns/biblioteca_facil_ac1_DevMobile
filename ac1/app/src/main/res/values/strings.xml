@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Biblioteca Facil</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Caio Souza</string>
+    <string name="nav_header_subtitle">171686@facens.br</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Galeria de Livros</string>
+    <string name="menu_slideshow">Livros Lidos</string>
+</resources>
