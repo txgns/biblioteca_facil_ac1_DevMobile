@@ -1,15 +1,7 @@
 package com.example.ac1;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Toast;
-
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -19,9 +11,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ac1.databinding.ActivityMainBinding;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,29 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.toolbar.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ShowToast")
-            @Override
-            public void onClick(View view) {
-
-                Button buttonEnviar = findViewById(R.id.buttonOK);
-                buttonEnviar.setOnClickListener(v ->{
-                    Toast.makeText(getApplicationContext(),"Livros selecionados para leitura!",
-                            Toast.LENGTH_LONG).show();
-
-                    CheckBox checkBox = findViewById(R.id.checkBox);
-                    checkBox.setOnCheckedChangeListener(((buttonView, isChecked) -> {
-                        if(isChecked){
-                            Toast.makeText(getApplicationContext(),"Livro selecionado",Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(getApplicationContext(),"Livro desmarcado!",Toast.LENGTH_SHORT).show();
-                        }
-                    }));
-
-                });
-
-            }
-        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -67,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        
-
     }
 
     @Override
